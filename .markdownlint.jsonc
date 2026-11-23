@@ -1,0 +1,6 @@
+{
+  // The workspace requires this HTML contact block on documentation pages.
+  "MD033": {
+    "allowed_elements": ["footer", "h3", "p", "a"]
+  }
+}
