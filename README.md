@@ -1,6 +1,10 @@
 # VoxBridge-bs-ext
 
-Local-first video dubbing for Edge and Firefox. No paid inference APIs.
+Project goal: local-first video dubbing for Edge and Firefox without paid
+inference APIs.
+
+**Status:** Documentation-only scaffold. No installable browser extension or
+dubbing implementation is available yet.
 
 <footer class="hire-me">
     <h3>Hire me</h3>

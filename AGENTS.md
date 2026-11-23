@@ -25,18 +25,25 @@ buildable browser extension.
 
 ## Verification
 
-Run these commands from this repository:
+With Node.js 22 or newer and the current `origin/main` fetched, run these
+commands from this repository:
 
 ```sh
 npx --yes markdownlint-cli2@0.24.2 README.md AGENTS.md
 git diff --check
+git diff --cached --check
+git diff --check origin/main...HEAD
 git remote get-url origin
 git ls-files --stage
 ```
 
-The origin must be `https://github.com/chirag127/VoxBridge-bs-ext.git`. Inspect
-staged changes with `git diff --cached --check` before committing. Verify the
-workspace's submodule path and URL separately in the owning workspace checkout.
+The three diff checks cover unstaged edits, staged edits, and the committed PR
+patch, respectively.
+
+The origin must identify `chirag127/VoxBridge-bs-ext` on GitHub. The canonical
+workspace URL is `https://github.com/chirag127/VoxBridge-bs-ext.git`; equivalent
+HTTPS URLs with or without `.git`, and SSH URLs, are valid. Verify the workspace's
+submodule path and URL separately in the owning workspace checkout.
 
 ## OKF documentation gap
 
